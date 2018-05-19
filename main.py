@@ -52,6 +52,6 @@ def controlInner(LCD, image_path="Frame", DIR = "0"):
 # Main flask app
 if __name__ == "__main__":
     # It creates https access by last argument. It is need to be give to web-page permission to microphone
-    app.run(host='192.168.2.2', port=8090, debug=True) #, ssl_context='adhoc')
+    app.run(host='192.168.8.127', port=8090, debug=True) #, ssl_context='adhoc')
 
 
