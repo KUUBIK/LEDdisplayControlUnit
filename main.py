@@ -42,7 +42,7 @@ def controlInner(LCD, image_path="Frame", DIR = "0"):
         image_path2 = files[d].replace('\n', '').replace('\r', '')
         print(image_path2)
         with open(str("./" + LCD + ".txt"), "w") as file:
-            file.write(image_path2 + ".png")
+            file.write(image_path2 + ".jpg")
 
 
     return render_template(
@@ -51,7 +51,8 @@ def controlInner(LCD, image_path="Frame", DIR = "0"):
 
 # Main flask app
 if __name__ == "__main__":
+    ip = input("Your ip is: ")
     # It creates https access by last argument. It is need to be give to web-page permission to microphone
-    app.run(host='192.168.8.127', port=8090, debug=True) #, ssl_context='adhoc')
+    app.run(host=ip, port=8090, debug=True) #, ssl_context='adhoc')
 
 
